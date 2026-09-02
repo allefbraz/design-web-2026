@@ -1,100 +1,67 @@
-# Repositório da turma de Design Web 2026
+## Tarefa 8 – Seção de Notícias com Tailwind
 
-
-## 4ª Semana
-
-### Passo 1 – Criar a branch da atividade
-Crie uma branch da atividade. 
-```
-git checkout -b atividade-1
-```
-### Passo 2 – Editar o arquivo index.html
-Substitua o conteúdo do <body> pelo código abaixo (ou personalize):
-
-```
-<div class="max-w-sm bg-white rounded-lg shadow-lg p-6 text-center">
-  <img src="https://picsum.photos/seed/1/100" alt="Foto de perfil" class="w-24 h-24 rounded-full mx-auto mb-4">
-  <h2 class="text-2xl font-bold text-gray-800">Seu Nome</h2>
-  <p class="text-gray-600 mt-2">Desenvolvedor Web em aprendizado</p>
-  <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-    Seguir
-  </button>
-</div>
-```
-
-## Passo 3 – Commit e push
-```
-git add index.html
-git commit -m "adiciona card de perfil estilizado com Tailwind"
-git push origin atividade-1
-```
-
-### Passo 4 – Enviar o link no Google Sala de Aula
-- No GitHub, vá até seu repositório fork.
-- No seletor de branches, escolha atividade-1.
-- Copie a URL (ex: https://github.com/SEU_USUARIO/turma-design-web/tree/atividade-1).
-- Cole esse link no campo de entrega da tarefa.
-
-
-## 3ª Semana 
-
-Fizemos algumas atividades, focados no Github. Criamos e clonamos nosso repositório principal.
-
-### Passo 1 – Fork do repositório
-
-- Acesse: https://github.com/professor/turma-design-web
-- Clique no botão Fork (canto superior direito). Isso criará uma cópia na sua conta. 
-
-### Passo 2 – Clonar o fork
-Abra o terminal (Git Bash, PowerShell ou terminal integrado do VS Code) e execute
-
-```
-git clone https://github.com/SEU_USUARIO/turma-design-web.git
-cd turma-design-web
-```
+ A partir da estrutura HTML fornecida (apenas com tags semânticas e conteúdo), você deve adicionar classes Tailwind para reproduzir o layout da imagem de referência (seção de notícias do IFRN).
 
 
 
-Arquivo de codigo compartilhado
 
-## 2ª Semana 
+### Imagem de referência
 
-### Cartão de Apresentação – Bruno Nakamura
-
-Projeto didático para ensinar a integração entre **HTML semântico** e **SCSS** (pré-processador CSS).
-
-## Estrutura
-
-projeto/
-
-├── index.html 
-
-├── scss/
-
-└── style.scss 
-
-└── css/
-
-└── style.css # Arquivo gerado pelo SCSS (não edite jamais ou vai perder tudo para sempre)
+A imagem mostra uma lista de notícias, cada uma com:
+- **Categoria** (ex: "Reunião", "Arte e Cultura", "Jogos Intercampi Estudantis 2026").
+- **Título** (em destaque).
+- **Descrição** curta.
+- **Data** (relativa, ex: "Há 1 hora, 3 minutos").
+- **Imagem** (thumbnail) – você deve adicionar imagens placeholder.
 
 
-## Como usar
+### O que fazer?
 
-1. **Clone ou baixe** os arquivos.
-2. **Compile o SCSS** para CSS:
-   - Com o Sass instalado: `sass scss/style.scss css/style.css --watch`
-   - Ou use a extensão "Live Sass Compiler" no VS Code.
-3. **Abra** o `index.html` no navegador.
+1. **Adicione classes Tailwind** a todos os elementos para reproduzir o layout da imagem.
+   - **Imagens:** devem ter largura total (`w-full`), altura fixa (`h-48` ou similar) e `object-cover` para não distorcer.
+   - **Layout:** organize as notícias em um **grid responsivo** (1 coluna em mobile, 2 ou 3 em desktop).
+   - **Categoria:** use um badge com fundo verde claro e texto verde escuro.
+   - **Data:** texto cinza pequeno, alinhado à direita ou após a categoria.
+   - **Título:** verde escuro, negrito, tamanho médio.
+   - **Descrição:** cinza, tamanho normal.
+   - **Card:** fundo branco, borda arredondada, sombra suave, espaçamento interno.
+   - **Efeito hover:** ao passar o mouse, a sombra deve aumentar ou a borda mudar.
 
-## Personalize
+2. **Use apenas classes utilitárias** – não crie CSS próprio.
+3. **Consulte o cheatsheet** para encontrar as classes adequadas.
+4. **Teste a responsividade** redimensionando a janela.
 
-- **Cores**: altere as variáveis no início do `style.scss` (`$color-primary`, `$color-secondary`, etc.).
-- **Imagem**: substitua a URL placeholder (`https://via.placeholder.com/...`) pelo seu próprio avatar.
-- **Conteúdo**: edite o HTML para mudar texto, tecnologias e links.
 
-## Boas práticas aplicadas
+## Classes Tailwind que você provavelmente usará (consulte o cheatsheet)
 
-- Tags HTML semânticas (`header`, `main`, `section`, `footer`)
-- Atributos de acessibilidade (`role`, `aria-label`, `focus-visible`)
-- Responsividade com mixins (mobile-first)
-- Código SCSS organizado com variáveis e aninhamento
+- Use grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 para o container.
+- Para o card: bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300.
+- Para a imagem: w-full h-48 object-cover.
+- Para a categoria: inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full.
+- Para o título: text-xl font-bold text-green-800 mt-2.
+- Para a descrição: text-gray-700 text-sm.
+- Para a data: text-gray-500 text-xs.
+
+---
+
+## Passo a passo para execução
+
+1. **Atualize seu fork** do repositório da turma.
+2. **Crie uma nova branch** para esta tarefa:  
+   ```bash
+   git checkout -b atividade-8-noticias
+   ```
+3. **Insira classes Tailwind** em cada elemento para reconstruir o layout, seguindo as orientações acima.
+4. **Adicione a lista de navegação** (links) que não está no código original, conforme imagem (Processos seletivos, Cursos, Campi, Institucional, Acesso à Informação, Eventos, Serviços). 
+5. **Commit e push**:
+   ```bash
+   git add .
+   git commit -m "Tarefa 8 - Seção de Notícias com Tailwind"
+   git push origin atividade-8-noticias
+   ```
+6.  **Envie o link da branch** no Google Sala de Aula.
+
+## Dicas
+
+- Use o **Cheatsheet** que foi fornecido para consultar rapidamente as classes.
+- Utilize o **Tailwind Play** (https://play.tailwindcss.com/) para testar pequenos trechos.
