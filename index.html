@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -14,9 +15,21 @@
     <title>Aula 2 – Tailwind</title>
     <script src="https://cdn.tailwindcss.com"></script>
 >>>>>>> origin/atividade-6
+=======
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 3 – Tailwind</title>
+    <!-- Tailwind CSS v4 (browser) -->
+>>>>>>> origin/atividade-7
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://unpkg.com/phosphor-icons@latest/src/css/phosphor.css" />
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
 </head>
+<<<<<<< HEAD
 <body class="bg-gray-100 p-6 flex flex-wrap gap-6 justify-center">
     <div class="max-w-[400px] mx-auto mt-10 bg-white rounded-2xl shadow-md overflow-hidden">
         <img
@@ -151,8 +164,68 @@
                     </div>
                 </a>
 
+=======
+<body class="bg-gray-100 min-h-screen">
+    <header class="bg-green-700 text-white shadow-md">
+        <div class="max-w-6xl mx-auto px-6 py-6 flex flex-wrap items-center justify-between">
+            <!-- LOGO + SLOGAN -->
+            <div class="flex items-center">
+                <h1>
+                    <a href="/" title="Instituto Federal de Educação, Ciência e Tecnologia do Estado do Rio Grande do Norte">
+                        <img src="assets/img/ifrn_logo_branco.svg">
+                    </a>
+                </h1>
+                <p class=" md:block text-xs text-green-100 max-w-xs leading-tight pl-4">
+                    Educação, Ciência, Cultura e Tecnologia em todo o Rio Grande do Norte
+                </p>
             </div>
+            <!-- MENU HAMBÚRGUER (mobile) -->
+            <button id="menuToggle" aria-label="Menu" class="md:hidden">
+                <i class="ph ph-list"></i>
+            </button>
+            <!-- AÇÕES (ícones, busca, contraste, modo escuro) -->
+            <div class="actions hidden md:flex items-center gap-3 order-3">
+                <!-- Ícones sociais -->
+                <ul class="social flex items-center gap-2 list-none m-0 p-0">
+                    <li><a href="#" aria-label="Instagram" class="w-8 h-8 flex items-center justify-center rounded-full border"><i class="ph ph-instagram-logo"></i></a></li>
+                    <li><a href="#" aria-label="Twitter" class="w-8 h-8 flex items-center justify-center rounded-full border"><i class="ph ph-twitter-logo"></i></a></li>
+                    <li><a href="#" aria-label="LinkedIn" class="w-8 h-8 flex items-center justify-center rounded-full border"><i class="ph ph-linkedin-logo"></i></a></li>
+                    <li><a href="#" aria-label="YouTube" class="w-8 h-8 flex items-center justify-center rounded-full border"><i class="ph ph-youtube-logo"></i></a></li>
+                    <li><a href="#" aria-label="Spotify" class="w-8 h-8 flex items-center justify-center rounded-full border"><i class="ph ph-spotify-logo"></i></a></li>
+                    <li><a href="#" aria-label="TikTok" class="w-8 h-8 flex items-center justify-center rounded-full border"><i class="ph ph-tiktok-logo"></i></a></li>
+                </ul>
+                <span class="text-white/40 p px-2">|</span>
+                <!-- Alto contraste -->
+                <button id="altocontraste" type="button" aria-label="Alto contraste" class="w-8 h-8 flex items-center justify-center rounded-full border border-white">
+                    <i class="ph ph-contrast"></i>
+                </button>
+                <!-- Modo escuro -->
+                <button type="button" aria-label="Modo escuro" class="w-8 h-8 flex items-center justify-center rounded-full border border-white">
+                    <i class="ph ph-moon"></i>
+                </button>
+                <!-- Busca -->
+                <form id="busca" method="get" action="/search/" class="flex items-center bg-white rounded-full px-3 py-1 text-gray-800 focus-within:ring-2 focus-within:ring-green-300">
+                    <button type="submit" aria-label="Pesquisar" class="text-gray-500 hover:text-gray-800 flex items-center justify-center">
+                        <i class="ph ph-magnifying-glass"></i>
+                    </button>
+                    <input type="search" name="query" placeholder="Busca" aria-label="Busca" class="text-sm text-gray-700 placeholder-gray-500 w-28 " />
+                </form>
+>>>>>>> origin/atividade-7
+            </div>
+            <!-- NAVEGAÇÃO PRINCIPAL (desktop) -->
+            <nav aria-label="Navegação principal" class="hidden md:flex items-center w-full order-4 border-t  pt-4 mt-4">
+                <ul class="flex items-center gap-6 text-sm font-semibold">
+                    <li><a href="#">Processos seletivos</a></li>
+                    <li><a href="#">Cursos</a></li>
+                    <li><a href="#">Campi</a></li>
+                    <li><a href="#">Institucional</a></li>
+                    <li><a href="#">Acesso à Informação</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Serviços</a></li>
+                </ul>
+            </nav>
         </div>
+<<<<<<< HEAD
     </section>
 
 =======
@@ -250,3 +323,8 @@
 </body>
 </html>
 >>>>>>> origin/atividade-6
+=======
+    </header>
+</body>
+</html>
+>>>>>>> origin/atividade-7
