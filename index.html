@@ -165,10 +165,8 @@
         //  3. Observe como v-for atualiza a interface
         // ==========================================
         removerOficina(id) {
-          // ... seu código aqui
-        }
+          this.oficinas = this.oficinas.filter(item => item.id !== id);}
       }
-
     }).mount('#app')
   </script>
 </body>
