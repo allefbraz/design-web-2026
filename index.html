@@ -132,9 +132,7 @@
         //  4. Aumente this.proximoId em 1
         //  5. Chame this.limparCampo()
         // ==========================================
-        adicionarOficina() {
-          // ... seu código aqui
-        },
+        adicionarOficina() {}
 
         // ==========================================
         // TODO 2 — alternarFavorito(id)  
@@ -150,20 +148,10 @@
         //       oficina.favorita = !oficina.favorita
         // ==========================================
         alternarFavorito(id) {
-          // ... seu código aqui
-        },
-
-        // ==========================================
-        // TODO 3 — removerOficina(id)  
-        // Exclui a oficina que recebeu o clique.
-        //
-        // Regras:
-        //  1. Use this.oficinas.filter(...) para
-        //     criar uma lista sem a oficina cujo
-        //     item.id for igual ao id recebido
-        //  2. Guarde a nova lista em this.oficinas
-        //  3. Observe como v-for atualiza a interface
-        // ==========================================
+          const oficina = this.oficinas.find(item => item.id === id);
+          if (!oficina) return; 
+          oficina.favorita = !oficina.favorita;
+}
         removerOficina(id) {
           this.oficinas = this.oficinas.filter(item => item.id !== id);}
       }
